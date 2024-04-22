@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="155.28" height="70.599" viewBox="0 0 155.28 70.599">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1" y1="0.544" x2="-0.083" y2="0.56" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#02c6ff"/>
+      <stop offset="0.565" stop-color="#02c6ff" stop-opacity="0.212"/>
+      <stop offset="0.774" stop-color="#02c6ff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#02c6ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1" y1="0.544" x2="-0.084" y2="0.55" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#02c6ff"/>
+      <stop offset="0.523" stop-color="#02c6ff" stop-opacity="0.212"/>
+      <stop offset="0.707" stop-color="#02c6ff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#02c6ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="그룹_26734" data-name="그룹 26734" transform="translate(155.28) rotate(90)">
+    <path id="패스_10721" data-name="패스 10721" d="M0,128.681,43.362,64.672,0,0Z" transform="translate(27.238 13.3)" fill="url(#linear-gradient)"/>
+    <path id="패스_10722" data-name="패스 10722" d="M0,155.28,53.649,77.973,0,0V155.28Z" transform="translate(0 0)" fill="url(#linear-gradient-2)"/>
+  </g>
+</svg>

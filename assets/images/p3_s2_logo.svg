@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="166.811" height="21.689" viewBox="0 0 166.811 21.689">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.517" y1="0.086" x2="0.482" y2="0.983" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0.502"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.908" y1="0.564" x2="-0.06" y2="0.594" xlink:href="#linear-gradient"/>
+    <clipPath id="clip-path">
+      <path id="패스_16" data-name="패스 16" d="M63.913.352a3.483,3.483,0,0,0-1.674,4.633L69.144,19.7a3.483,3.483,0,0,0,3.147,2h.014a3.485,3.485,0,0,0,3.146-4.964L68.546,2.025A3.48,3.48,0,0,0,63.913.352" transform="translate(-61.908 -0.021)" fill="url(#linear-gradient)"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="패스_15" data-name="패스 15" d="M10.464,0A3.472,3.472,0,0,0,8.991.331c-.051.024-.1.049-.15.075A3.449,3.449,0,0,0,7.36,1.987L3.253,10.618l-2.922,6.1a3.483,3.483,0,1,0,6.307,2.959l1.13-2.41a5.231,5.231,0,0,0-.005-4.479l-.815-1.725L6.47,10a1.443,1.443,0,0,1,.117-1.514,1.484,1.484,0,0,1,2.4.042l5.233,11.151a3.484,3.484,0,1,0,6.307-2.959L13.624,2a3.483,3.483,0,0,0-3.15-2Z" transform="translate(0)" fill="url(#linear-gradient-2)"/>
+    </clipPath>
+  </defs>
+  <g id="p3_s2_logo" transform="translate(-100.189 -1243)">
+    <text id="통합_데이터_플랫폼" data-name="통합 데이터 플랫폼" transform="translate(202 1260)" fill="#fff" font-size="18" font-family="Pretendard-Medium, Pretendard" font-weight="500" letter-spacing="-0.03em"><tspan x="-64.191" y="0">통합 데이터 플랫폼</tspan></text>
+    <g id="그룹_10" data-name="그룹 10" transform="translate(100.189 1243)">
+      <g id="그룹_8" data-name="그룹 8" transform="translate(17.916 0.006)" clip-path="url(#clip-path)">
+        <rect id="사각형_8" data-name="사각형 8" width="23.351" height="26.13" transform="translate(-9.538 4.874) rotate(-28.301)" fill="url(#linear-gradient)"/>
+      </g>
+      <g id="그룹_7" data-name="그룹 7" transform="translate(0 0)" clip-path="url(#clip-path-2)">
+        <rect id="사각형_7" data-name="사각형 7" width="30.302" height="30.407" transform="matrix(0.845, -0.534, 0.534, 0.845, -10.5, 6.328)" fill="url(#linear-gradient-2)"/>
+      </g>
+    </g>
+  </g>
+</svg>
