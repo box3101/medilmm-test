@@ -262,84 +262,110 @@
 })();
 
 //개인정보 처리방침
-document.getElementById('contentPrivacy').addEventListener('click', function () {
-  document.querySelector('.modal.type-privacy').classList.add('isOpen');
-});
-document.querySelectorAll('.modal__bg, .btn-privacy').forEach(function (element) {
-  element.addEventListener('click', function () {
-    document.querySelector('.modal.type-privacy').classList.remove('isOpen');
+const contentPrivacy = document.getElementById('contentPrivacy');
+if (contentPrivacy) {
+  document.getElementById('contentPrivacy').addEventListener('click', function () {
+    document.querySelector('.modal.type-privacy').classList.add('isOpen');
   });
-});
+  document.querySelectorAll('.modal__bg, .btn-privacy').forEach(function (element) {
+    element.addEventListener('click', function () {
+      document.querySelector('.modal.type-privacy').classList.remove('isOpen');
+    });
+  });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const button = document.querySelectorAll('.myButton');
-  button.forEach((el) => {
-    if (el) {
-      el.addEventListener('click', function () {
-        sendInquiry();
-      });
+  document.addEventListener('DOMContentLoaded', function () {
+    const button = document.querySelectorAll('.myButton');
+    button.forEach((el) => {
+      if (el) {
+        el.addEventListener('click', function () {
+          sendInquiry();
+        });
+      }
+    });
+  });
+  function sendInquiry() {
+    const name = document.getElementById('Name');
+    const belong = document.getElementById('Belong');
+    const phone = document.getElementById('Phone');
+    const mail = document.getElementById('Mail');
+    const inquiry = document.getElementById('Inquiry');
+    const privacy = document.getElementById('Privacy');
+
+    if (!name.value) {
+      Swal.fire(' ', '이름을 입력해주세요');
+      name.focus();
+      return;
     }
-  });
-});
-function sendInquiry() {
-  const name = document.getElementById('Name');
-  const belong = document.getElementById('Belong');
-  const phone = document.getElementById('Phone');
-  const mail = document.getElementById('Mail');
-  const inquiry = document.getElementById('Inquiry');
-  const privacy = document.getElementById('Privacy');
+    if (!belong.value) {
+      Swal.fire(' ', '소속을 입력해주세요');
+      belong.focus();
+      return;
+    }
+    if (!phone.value) {
+      Swal.fire(' ', '연락처(휴대폰)을 입력해주세요');
+      phone.focus();
+      return;
+    }
 
-  if (!name.value) {
-    Swal.fire(' ', '이름을 입력해주세요');
-    name.focus();
-    return;
-  }
-  if (!belong.value) {
-    Swal.fire(' ', '소속을 입력해주세요');
-    belong.focus();
-    return;
-  }
-  if (!phone.value) {
-    Swal.fire(' ', '연락처(휴대폰)을 입력해주세요');
-    phone.focus();
-    return;
-  }
+    if (!/^\d{10,11}$/.test(phone.value)) {
+      Swal.fire(' ', '올바른 전화번호를 입력해주세요.');
+      phone.focus();
+      return;
+    }
 
-  if (!/^\d{10,11}$/.test(phone.value)) {
-    Swal.fire(' ', '올바른 전화번호를 입력해주세요.');
-    phone.focus();
-    return;
-  }
+    if (!mail.value) {
+      Swal.fire(' ', '메일을 입력해주세요');
+      mail.focus();
+      return;
+    }
 
-  if (!mail.value) {
-    Swal.fire(' ', '메일을 입력해주세요');
-    mail.focus();
-    return;
-  }
+    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail.value)) {
+      Swal.fire(' ', '유효한 이메일 주소를 입력해주세요');
+      mail.focus();
+      return;
+    }
 
-  if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail.value)) {
-    Swal.fire(' ', '유효한 이메일 주소를 입력해주세요');
-    mail.focus();
-    return;
-  }
+    if (!inquiry.value) {
+      Swal.fire(' ', '문의사항을 입력해주세요');
+      inquiry.focus();
+      return;
+    }
 
-  if (!inquiry.value) {
-    Swal.fire(' ', '문의사항을 입력해주세요');
-    inquiry.focus();
-    return;
-  }
+    if (!privacy.checked) {
+      Swal.fire(' ', '개인정보 활용에 동의해주세요');
+      privacy.focus();
+      return;
+    }
 
-  if (!privacy.checked) {
-    Swal.fire(' ', '개인정보 활용에 동의해주세요');
-    privacy.focus();
-    return;
+    Swal.fire({
+      icon: 'success',
+      html: '<strong>성공!</strong> 문의사항이 접수되었습니다.',
+      customClass: {
+        icon: 'custom-success',
+      },
+    });
   }
+}
 
-  Swal.fire({
-    icon: 'success',
-    html: '<strong>성공!</strong> 문의사항이 접수되었습니다.',
-    customClass: {
-      icon: 'custom-success',
-    },
+// 비디오 삭제
+const videoElement = document.querySelector('.visual__video.video1');
+if (videoElement) {
+  document.addEventListener('DOMContentLoaded', function () {
+    function adjustVideoAutoplay() {
+      if (window.innerWidth <= 600) {
+        if (videoElement && videoElement.hasAttribute('autoplay')) {
+          videoElement.removeAttribute('autoplay'); // autoplay 속성 제거
+          videoElement.pause();
+        }
+      } else {
+        if (videoElement && !videoElement.hasAttribute('autoplay')) {
+          videoElement.setAttribute('autoplay', '');
+          videoElement.play();
+        }
+      }
+    }
+
+    adjustVideoAutoplay(); // 초기 로드 시 실행
+    window.addEventListener('resize', adjustVideoAutoplay); // 창 크기 변경 시 실행
   });
 }
