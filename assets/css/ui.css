@@ -110186,6 +110186,64 @@ body.isOpen {
   height: 6.25rem;
 }
 
+.mo-data .title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  height: 57px;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgb(28, 130, 249) 0%, rgb(28, 69, 249) 100%);
+}
+.mo-data .title span {
+  margin: 0 7px;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  width: 1px;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.4);
+}
+.mo-data .img {
+  margin-top: 30px;
+  text-align: center;
+}
+.mo-data .img img {
+  display: inline-block;
+}
+.mo-data ul {
+  margin-top: -193px;
+  position: relative;
+  z-index: 10;
+}
+.mo-data ul li {
+  display: flex;
+  align-items: center;
+  padding: 19px 34px;
+  background: #000;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+.mo-data ul li .left {
+  text-align: center;
+  margin-right: 18px;
+  flex: 0 0 100px;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 25px;
+}
+.mo-data ul li .right {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 25px;
+  letter-spacing: -1px;
+}
+
 /* ///////////////////////////////////////////////////////
 web
 */

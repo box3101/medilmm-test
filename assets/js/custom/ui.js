@@ -307,7 +307,7 @@ if (contentPrivacy) {
       return;
     }
 
-    if (!/^\d{10,11}$/.test(phone.value)) {
+    if (!/^\d{10,11}$|^(010)-\d{3,4}-\d{4}$/.test(phone.value)) {
       Swal.fire(' ', '올바른 전화번호를 입력해주세요.');
       phone.focus();
       return;
