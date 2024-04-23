@@ -70,10 +70,10 @@
       offset: 60,
       once: true,
       duration: 1000, // 모든 AOS 애니메이션의 지속 시간을 1초(1000밀리초)로 설정
-      disable: function () {
-        // 화면 너비가 768픽셀 이하이면 AOS를 비활성화
-        return window.innerWidth < 768;
-      },
+      // disable: function () {
+      //   // 화면 너비가 768픽셀 이하이면 AOS를 비활성화
+      //   return window.innerWidth < 768;
+      // },
     });
   });
 
@@ -272,53 +272,74 @@ document.querySelectorAll('.modal__bg, .btn-privacy').forEach(function (element)
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  const button = document.getElementById('myButton');
-
-  if (button) {
-    button.addEventListener('click', function () {
-      sendInquiry();
-    });
-  }
+  const button = document.querySelectorAll('.myButton');
+  button.forEach((el) => {
+    if (el) {
+      el.addEventListener('click', function () {
+        sendInquiry();
+      });
+    }
+  });
 });
-
 function sendInquiry() {
-  const name = document.getElementById('Name').value;
-  const belong = document.getElementById('Belong').value;
-  const phone = document.getElementById('Phone').value;
-  const mail = document.getElementById('Mail').value;
-  const inquiry = document.getElementById('Inquiry').value;
+  const name = document.getElementById('Name');
+  const belong = document.getElementById('Belong');
+  const phone = document.getElementById('Phone');
+  const mail = document.getElementById('Mail');
+  const inquiry = document.getElementById('Inquiry');
   const privacy = document.getElementById('Privacy');
 
-  if (!name) {
-    alert('이름을 입력해주세요');
+  if (!name.value) {
+    Swal.fire(' ', '이름을 입력해주세요');
+    name.focus();
     return;
   }
-  if (!belong) {
-    alert('소속을 입력해주세요');
+  if (!belong.value) {
+    Swal.fire(' ', '소속을 입력해주세요');
+    belong.focus();
     return;
   }
-  if (!phone) {
-    alert('연락처(휴대폰)을 입력해주세요');
+  if (!phone.value) {
+    Swal.fire(' ', '연락처(휴대폰)을 입력해주세요');
+    phone.focus();
     return;
   }
 
-  if (!/^\d{10,11}$/.test(phone)) {
-    alert('올바른 전화번호를 입력해주세요.');
+  if (!/^\d{10,11}$/.test(phone.value)) {
+    Swal.fire(' ', '올바른 전화번호를 입력해주세요.');
+    phone.focus();
     return;
   }
 
-  if (!mail) {
-    alert('메일을 입력해주세요');
+  if (!mail.value) {
+    Swal.fire(' ', '메일을 입력해주세요');
+    mail.focus();
     return;
   }
-  if (!inquiry) {
-    alert('문의사항을 입력해주세요');
+
+  if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail.value)) {
+    Swal.fire(' ', '유효한 이메일 주소를 입력해주세요');
+    mail.focus();
+    return;
+  }
+
+  if (!inquiry.value) {
+    Swal.fire(' ', '문의사항을 입력해주세요');
+    inquiry.focus();
     return;
   }
 
   if (!privacy.checked) {
-    alert('개인정보 활용에 동의해주세요');
+    Swal.fire(' ', '개인정보 활용에 동의해주세요');
+    privacy.focus();
     return;
   }
-  console.log('성공');
+
+  Swal.fire({
+    icon: 'success',
+    html: '<strong>성공!</strong> 문의사항이 접수되었습니다.',
+    customClass: {
+      icon: 'custom-success',
+    },
+  });
 }
