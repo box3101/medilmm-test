@@ -107514,6 +107514,24 @@ body {
   object-fit: contain;
 }
 
+.web-img-grp {
+  position: relative;
+  padding-top: 50.4%;
+}
+@media (max-width: 900px) {
+  .web-img-grp {
+    padding-top: 78.4%;
+  }
+}
+.web-img-grp .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .header {
   height: 5.3125rem;
   position: fixed;
@@ -108303,6 +108321,11 @@ body {
     font-size: 0.875rem;
   }
 }
+@media (max-width: 900px) {
+  #footer.footer .inner .footer__wrap .footer__grp .footer__info_grp .footer__info .footer__info_txt {
+    font-size: 14px;
+  }
+}
 #footer.footer .inner .footer__wrap .footer__grp .footer__info_grp .footer__info .footer__info_txt a {
   color: #3e3e3e !important;
 }
@@ -108329,6 +108352,11 @@ body {
   font-weight: 400;
   color: #d2d2d2;
   letter-spacing: -0.0187rem;
+}
+@media (max-width: 900px) {
+  #footer.footer .inner .footer__wrap .footer__grp .footer__copyright {
+    font-size: 12px;
+  }
 }
 #footer.footer .inner .footer__wrap .footer__grp .footer__ttl {
   margin-bottom: 2.125rem;
@@ -108584,7 +108612,7 @@ section.visual .visual__txt span {
   }
   section.visual .visual__inner {
     justify-content: flex-start;
-    padding-top: 175px;
+    padding-top: 125px;
   }
   section.visual .visual__txt {
     margin-top: 1.6rem;
@@ -110223,7 +110251,12 @@ body.isOpen {
   height: 6.25rem;
 }
 
+.mo-data {
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.08);
+}
 .mo-data .title {
+  border-radius: 8px;
   font-size: 17px;
   font-weight: 600;
   color: #fff;
@@ -110232,7 +110265,7 @@ body.isOpen {
   display: flex;
   place-content: center;
   align-items: center;
-  background: linear-gradient(180deg, rgb(28, 130, 249) 0%, rgb(28, 69, 249) 100%);
+  background: linear-gradient(to right, rgb(28, 130, 249) 30%, rgb(28, 69, 249) 70%);
 }
 .mo-data .title span {
   margin: 0 7px;
@@ -110254,6 +110287,7 @@ body.isOpen {
   margin-top: -193px;
   position: relative;
   z-index: 10;
+  padding: 0 12px 12px;
 }
 .mo-data ul li {
   display: flex;
@@ -110830,8 +110864,8 @@ mo
     top: -15px;
   }
   .About .icon-bottom .icon-arrow {
-    width: 67px;
-    height: 124px;
+    width: 57px;
+    height: 94px;
   }
 }
 

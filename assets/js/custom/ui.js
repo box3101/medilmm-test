@@ -307,11 +307,11 @@ if (contentPrivacy) {
       return;
     }
 
-    if (!/^\d{10,11}$|^(010)-\d{3,4}-\d{4}$/.test(phone.value)) {
-      Swal.fire(' ', '올바른 전화번호를 입력해주세요.');
+    if (!(/^\+?\d{1,3}[-\s]?\d{1,5}[-\s]?\d{1,6}[-\s]?\d{1,4}$/.test(phone.value) && phone.value.replace(/[-\s+]/g, '').length <= 16)) {
+      Swal.fire(' ', '올바른 휴대폰 번호를 입력해주세요.');
       phone.focus();
       return;
-    }
+    } 
 
     if (!mail.value) {
       Swal.fire(' ', '메일을 입력해주세요');
