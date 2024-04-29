@@ -110178,6 +110178,11 @@ body.isOpen {
   align-items: center;
   padding-bottom: 20px;
 }
+@media (max-width: 900px) {
+  .CADWarp .sec02 .process-step-wrap .process-step {
+    padding-bottom: 36px;
+  }
+}
 .CADWarp .sec02 .process-step-wrap .process-step .step-title {
   margin-top: 2rem;
   width: 5.9375rem;
@@ -110225,10 +110230,25 @@ body.isOpen {
   position: relative;
   justify-content: center;
 }
-.CADWarp .sec02 .process-step-wrap.type2 .right .process-step i {
-  position: absolute;
-  top: 3.75rem;
-  right: -1.0625rem;
+@media (max-width: 900px) {
+  .CADWarp .sec02 .process-step-wrap.type2 .right .process-step {
+    padding-bottom: 48px;
+    justify-content: flex-start;
+  }
+  .CADWarp .sec02 .process-step-wrap.type2 .right .process-step:nth-of-type(5) {
+    padding-bottom: 72px;
+  }
+  .CADWarp .sec02 .process-step-wrap.type2 .right .process-step:nth-of-type(5) .icon-bottom {
+    position: relative;
+    top: 20px;
+  }
+}
+@media (min-width: 900px) {
+  .CADWarp .sec02 .process-step-wrap.type2 .right .process-step i {
+    position: absolute;
+    left: 182px;
+    top: 44px;
+  }
 }
 .CADWarp .sec02 .process-step-wrap.type2 .right .step-content {
   margin-top: 0;
@@ -110425,16 +110445,19 @@ tab
   .CADWarp .sec02 .process-step-wrap .right:after {
     display: none;
   }
-  .CADWarp .sec02 .process-step-wrap.type2 .right .process-step i {
+  .CADWarp .sec02 .process-step-wrap .right .process-step i {
     width: 25px;
     transform: rotate(251deg);
-    top: -37px;
-    right: -26px;
+    top: -42px;
+    right: -34px;
+    position: absolute;
   }
   .CADWarp .sec02 .process-step-wrap.type2 .right .participant-count {
+    margin-top: 29px;
     width: 100%;
     font-size: 12px;
     box-sizing: border-box;
+    height: 33px;
   }
   .CADWarp .sec02 .process-step-wrap .process-step .step-content {
     order: 1;
@@ -110464,20 +110487,33 @@ tab
     padding: 8px 0;
     line-height: 1;
     margin-top: 7px;
+    height: 33px;
+    margin-top: 24px;
   }
   .CADWarp .sec02 .process-step-wrap .process-step .participant-count {
     font-size: 13px;
     font-weight: 600;
-    margin-top: 4px;
+    margin-top: 17px;
+    height: 0px;
   }
   .CADWarp .sec02 .process-step-wrap .process-step .step-content img {
     display: inline-block;
     height: auto;
-    width: 7rem;
+    width: 9rem;
+    position: relative;
+    top: 12px;
   }
   .CADWarp .sec02 .process-step-wrap .process-step {
     flex-direction: column-reverse;
+    flex: 1;
   }
+}
+@media (max-width: 900px) and (max-width: 900px) {
+  .CADWarp .sec02 .process-step-wrap .process-step:last-of-type {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 900px) {
   .CADWarp .sec02 .process-step-wrap .left {
     width: 100%;
     height: 80px;
@@ -110495,9 +110531,31 @@ tab
     margin-bottom: 0;
   }
   .CADWarp .sec02 .process-step-wrap .right {
+    flex: 0;
     flex-direction: column;
     border-radius: 0 0 8px 8px;
     padding: 0 20px;
+    padding-top: 26px;
+  }
+  .CADWarp .sec02 .process-step-wrap.type2 .right {
+    padding-top: 20px;
+  }
+  .CADWarp .sec02 .process-step-wrap .process-step .step-content {
+    margin-top: 0;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .CADWarp .sec02 .process-step-wrap .process-step:nth-of-type(5) .step-content {
+    height: 6.8rem;
+  }
+  .CADWarp .sec02 .process-step-wrap.type2 .process-step:nth-of-type(5) .step-content {
+    height: 5rem;
+  }
+  .CADWarp .sec02 .process-step-wrap.type2 .process-step .step-content img {
+    height: 7rem;
+    width: auto !important;
   }
   .CADWarp .sec02 {
     padding-top: 76px;
@@ -110908,6 +110966,43 @@ mo
   margin: 0;
   padding: 0;
   display: block !important;
+}
+
+.icon-bottom-type2 {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  margin-left: -30px;
+}
+.icon-bottom-type2 .icon-arrow-type2 {
+  animation-name: animation;
+  transform: rotate(0deg);
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: backwards;
+}
+@keyframes animation {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateY(10%);
+  }
+}
+
+.icon-arrow-type2 {
+  width: 60px !important;
+  height: 82px;
+  top: 65% !important;
+  left: 24% !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='54.799' height='24.915' viewBox='0 0 54.799 24.915'%3E%3Cdefs%3E%3ClinearGradient id='linear-gradient' x1='1' y1='0.5' x2='-0.104' y2='0.5' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%231c1c1c' stop-opacity='0.4'/%3E%3Cstop offset='0.565' stop-color='%231c1c1c' stop-opacity='0.102'/%3E%3Cstop offset='0.774' stop-color='%231c1c1c' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%231c1c1c' stop-opacity='0'/%3E%3C/linearGradient%3E%3ClinearGradient id='linear-gradient-2' x1='1' y1='0.5' x2='-0.132' y2='0.5' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%231c1c1c' stop-opacity='0.502'/%3E%3Cstop offset='0.523' stop-color='%231c1c1c' stop-opacity='0.102'/%3E%3Cstop offset='0.707' stop-color='%231c1c1c' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%231c1c1c' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg id='그룹_28311' data-name='그룹 28311' transform='translate(-72 -1566)'%3E%3Cpath id='패스_10721' data-name='패스 10721' d='M0,45.412,15.3,22.823,0,0Z' transform='translate(122.105 1575.612) rotate(90)' fill='url(%23linear-gradient)'/%3E%3Cpath id='패스_10722' data-name='패스 10722' d='M0,54.8,18.933,27.517,0,0V54.8Z' transform='translate(126.799 1566) rotate(90)' fill='url(%23linear-gradient-2)'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
 
 @media (max-width: 600px) {
